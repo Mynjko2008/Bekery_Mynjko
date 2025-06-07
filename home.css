@@ -16,9 +16,9 @@
 
 :root {
 
-    --main-color: rgb(255, 255, 0);
+    --main-color: rgba(255, 255, 0, 0.753);
     --bg: #ebdfca;
-    --br-card: #0c0c14;
+    --br-card: rgb(44, 34, 34);
     --border: 0.1rem solid white;
 
 }
@@ -70,7 +70,7 @@ header{
 
 .icons i {
     /* AGORA SIM É NOS ICONES */
-    color: white;/* cor do icone */
+    color: white; /* cor do icone */
     cursor: pointer; /* cursor de ponteiro */
     font-size: 2.5rem; /* tamanho do icone */
     padding: 0.5rem; /* espaçamento interno do icone */
@@ -79,6 +79,8 @@ header{
 .icons i:hover {
     color: var(--main-color); /* muda a cor do icone quando o mouse passa por cima */
 }
+
+/* Home Section */
 
 #home {
     display: flex; /* exibe como flexbox */
@@ -90,6 +92,7 @@ header{
     background-size: cover; /* preenchimento da imagem */
     background-position: center; /* posicionamento da imagem */
     border-bottom: var(--border); /* adiciona borda inferior */
+    
 }
 
 .content {
@@ -105,14 +108,6 @@ header{
     color: white; /* cor do texto */
 }
 
-.content p {
-    font-size: 2rem; /* tamanho da fonte */
-    font-weight: lighter; /* peso da fonte mais leve */
-    line-height: 1.8; /* espaçamento entre linhas */
-    padding: 1rem 0; /* espaçamento entre linhas */
-    color: white; /* cor do texto */
-}
-
 #home::before {
     content: ""; /* adicona pseudo-elemento vazio */
     position: absolute; /* permite posicionamento absoluto */
@@ -124,18 +119,34 @@ header{
     z-index: 1;
 }
 
+.btn {
+    margin-top: 1rem; /* espaçamento superior */
+    padding: 0.9rem 3rem; /* preenchimento interno superior e inferior */
+    background: #996435; /* cor de fundo */
+    color: white; /* cor do texto */
+    font-size: 1.7rem; /* tamanho do texto */
+    cursor: pointer; /* cursor de ponteiro */
+    display: inline-block; /* exibe como bloco em linha */
+    border-radius: 5rem; /* borda arredondada */
+    display: flex;
+    justify-content: center; /* alinha os itens ao centro */
+}
+
+.btn:hover {
+    letter-spacing: 0.2rem; /* espaçamento entre letras */
+}
+
+/* About Section */
+
+
+
 /* footer */
 .title-footer {
-    text-align: center;
-    /* Centraliza o texto */
-    text-transform: uppercase;
-    /* Converte o texto para letras maiúsculas */
-    font-size: 2rem;
-    /* Define o tamanho da fonte */
-    color: #fff;
-    /* Define a cor do texto como branco */
-    margin-bottom: 1.5rem;
-    /* Adiciona espaço abaixo do título */
+    text-align: center; /* Centraliza o texto */
+    text-transform: uppercase; /* Converte o texto para letras maiúsculas */
+    font-size: 2rem; /* Define o tamanho da fonte */
+    color: #fff; /* Define a cor do texto como branco */
+    margin-bottom: 1.5rem; /* Adiciona espaço abaixo do título */
 }
 
 .title-footer span {
@@ -179,6 +190,7 @@ header{
 
 .content-1 ul li a:hover {
     color: var(--main-color); /* Altera a cor para a cor principal ao passar o mouse */
+    border-bottom: 0.1rem solid var(--main-color); /* adiciona uma borda inferior ao link quando o mouse passa por cima */
 }
 
 .social-links {
