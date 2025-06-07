@@ -17,7 +17,7 @@
 :root {
 
     --main-color: rgba(255, 255, 0, 0.753);
-    --bg: #ebdfca;
+    --bg: #ddc396;
     --br-card: rgb(44, 34, 34);
     --border: 0.1rem solid white;
 
@@ -138,6 +138,75 @@ header{
 
 /* About Section */
 
+section {
+    padding: 2rem 7%; /* Espaçamento interno nas sessões(responsividade) */
+
+}
+
+.heading {
+    text-align: center; /* centraliza o texto */
+    color: #f0a249; /* cor do texto */
+    text-transform: uppercase;/* caixa alta */
+    font-size: 4rem; /* tamanho do texto */
+    padding-bottom: 3rem; /* espaçamento inferior */
+}
+
+.heading span {
+    color: #e27d01; /* cor do texto */
+    text-transform: uppercase; /* caixa alta */
+}
+.row {
+    display: flex;
+    /* exibe como flexbox */
+    align-items: center;
+    /* alinha os itens ao centro */
+    justify-content: center;
+    /* alinha os itens ao centro */
+    flex-wrap: wrap;
+    /* quebra de linha */
+    border: var(--border);
+    /* borda */
+    background: var(--br-card);
+    /* cor de fundo */
+}
+
+.row .image {
+    flex: 1 1 45rem; /* define o tamanho flexivel do elemento: base 45rem, podendo crescer ou encolher, ou seja, faz com que possa ser adaptavel para telas grandes e pequenas */
+}
+
+.row .image img {
+    width: 100%;
+    /* largura total */
+    height: 100%;
+    /* altura total */
+    border-radius: 3rem;
+    /* borda arredondada */
+}
+
+.row .content {
+    flex: 1 1 45rem;
+    /* define o tamanho flexivel do elemento: base 45rem, podendo crescer ou encolher */
+    padding: 2rem;
+    /* espaçamento interno ao redor do conteúdo */
+}
+
+.row .content h3 {
+    font-size: 3rem;
+    /* tamanho do texto */
+    color: white;
+    /* cor do texto */
+}
+
+.row .content p {
+    font-size: 1.6rem;
+    /* tamanho do texto */
+    color: #ccc;
+    /* cor do texto */
+    padding: 1rem 0;
+    /* espaçamento interno vertical ao texto e as laterais zeradas */
+    line-height: 1.8rem;
+    /* espaçamento entre linhas de um texto*/
+}
 
 
 /* footer */
