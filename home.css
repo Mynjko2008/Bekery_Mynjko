@@ -1,17 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* Reset */
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Faz com que o padding e margin sejam aplicados corretamente */
+    font-family: 'Roboto', 'sans-serif';
     text-decoration: none;
-    list-style: none;
+    text-transform: capitalize; /* Deixa o texto em caixa baixa */
+    transition: 0.2s linear; /* Transição suave */
+    outline: none; /* Remove contorno */
+    border: none; /* Remove borda */
     scroll-behavior: smooth;
-    font-family: 'Viner Hand ITC', sans-serif;
+    list-style: none;
+}
+
+:root {
+
+    --main-color: rgb(255, 255, 0);
+    --bg: #ebdfca;
+    --br-card: #0c0c14;
+    --border: 0.1rem solid white;
+
+}
+
+html{
+    font-size: 62.5%; /* Configuração do font-size para 62.5%, facilitando o uso do rem (1rem = 10px) */
+}
+
+body {
+    background: var(--bg);
 }
 
 
+header{
+    background: #A55B1B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.ul-header {
+    display: flex;
+    gap: 15px;
+}
+
+.ul-header li a {
+    color: white;
+    font-size: 1.6rem;
+}
+
+.ul-header li a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color); /* adiciona uma borda inferior ao link quando o mouse passa por cima */
+    padding-bottom: 0.5rem; /* adiciona um espaçamento inferior ao link quando o mouse passa por cima */
+    transition: 0.2s linear; /* adiciona uma transição suave ao efeito */
+}
+
+.icons {
+    /* NÂO ESTOU MEXENDO NOS ICONES E SIM NA DIV */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons i {
+    /* AGORA SIM É NOS ICONES */
+    color: white;/* cor do icone */
+    cursor: pointer; /* cursor de ponteiro */
+    font-size: 2.5rem; /* tamanho do icone */
+    padding: 0.5rem; /* espaçamento interno do icone */
+}
+
+.icons i:hover {
+    color: var(--main-color); /* muda a cor do icone quando o mouse passa por cima */
+}
+
+#home {
+    display: flex; /* exibe como flexbox */
+    align-items: center; /* alinha os itens ao centro */
+    justify-content: center; /* alinha os itens ao centro */
+    position: relative; /* permite posicionamento relativo */
+    min-height: 85vh; /* altura minima da sessão */
+    background: url(images/home.jpg) no-repeat; /* add img sem repetição */
+    background-size: cover; /* preenchimento da imagem */
+    background-position: center; /* posicionamento da imagem */
+    border-bottom: var(--border); /* adiciona borda inferior */
+}
+
+.content {
+    max-width: 60rem; /* define altura maxima */
+    position: relative; /* permite posicionamento relativo */
+    z-index: 2; /* garante que o conteudo fique acima da sobreposição */
+
+}
+
+.content h3 {
+    font-size: 6rem; /* tamanho do titulo */
+    text-transform: uppercase; /* deixando o texto em caixa alta */
+    color: white; /* cor do texto */
+}
+
+.content p {
+    font-size: 2rem; /* tamanho da fonte */
+    font-weight: lighter; /* peso da fonte mais leve */
+    line-height: 1.8; /* espaçamento entre linhas */
+    padding: 1rem 0; /* espaçamento entre linhas */
+    color: white; /* cor do texto */
+}
+
+#home::before {
+    content: ""; /* adicona pseudo-elemento vazio */
+    position: absolute; /* permite posicionamento absoluto */
+    top: 0; /* alinha o pseudo-elemento ao topo */
+    left: 0; /* alinha a esuqerda */
+    width: 100%; /* ocupa toda largura */
+    height: 100%; /* ocupa toda toda largura */
+    background: rgba(0, 0, 0, 0.5); /* adiciona sobreposição mais escura */
+    z-index: 1;
+}
+
+/* footer */
+.title-footer {
+    text-align: center;
+    /* Centraliza o texto */
+    text-transform: uppercase;
+    /* Converte o texto para letras maiúsculas */
+    font-size: 2rem;
+    /* Define o tamanho da fonte */
+    color: #fff;
+    /* Define a cor do texto como branco */
+    margin-bottom: 1.5rem;
+    /* Adiciona espaço abaixo do título */
+}
+
+.title-footer span {
+    color: 	#f0a64c; /* Aplica a cor principal ao texto dentro do span */
+    text-transform: uppercase; /* Converte o texto para letras maiúsculas */
+}
+
+.footer {
+    background: #996435; /* Define a cor de fundo do rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 4rem 0; /* Adiciona espaçamento interno vertical ao rodapé */
+}
+
+.footer .container {
+    display: flex; /* Ativa o layout flexível */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    padding: 0 7%; /* Adiciona espaçamento interno horizontal */
+}
+
+.content-1 {
+    flex: 1 1 25rem; /* Define tamanho flexível com largura mínima de 25rem */
+    margin: 1rem; /* Adiciona espaçamento ao redor do conteúdo */
+}
+
+.content-1 ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o espaçamento interno padrão */
+}
+
+.content-1 ul li {
+    margin-bottom: 1rem; /* Adiciona espaçamento inferior entre os itens da lista */
+}
+
+.content-1 ul li a {
+    color: white; /* Define a cor do texto como cinza claro */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 1.6rem; /* Define o tamanho da fonte */
+    transition: color 0.3s; /* Aplica uma transição suave na mudança de cor */
+}
+
+.content-1 ul li a:hover {
+    color: var(--main-color); /* Altera a cor para a cor principal ao passar o mouse */
+}
+
+.social-links {
+    display: flex; /* Ativa o layout flexível */
+    gap: 1rem; /* Define o espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    margin-top: 1.5rem; /* Adiciona espaço acima das redes sociais */
+}
+
+.social-links a {
+    color: white; /* Define a cor inicial dos ícones */
+    font-size: 3rem; /* Define o tamanho dos ícones */
+    transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+.social-links a:hover {
+    color: var(--main-color); /* Altera a cor para a cor principal ao passar o mouse */
+}
+
+.footer-bottom {
+    text-align: center; /* Centraliza o texto */
+    padding: 1rem 0; /* Adiciona espaçamento interno vertical */
+    font-size: 1.6rem; /* Define o tamanho da fonte */
+    border-top: var(--border); /* Adiciona uma borda superior */
+    margin-top: 2rem; /* Adiciona espaço acima do rodapé inferior */
+    color: white; /* Define a cor do texto como branco*/
+}
 
 /* Whatsapp Button */
-.botao-whats{
+.botao-whats {
     position: fixed;
     bottom: 20px;
     right: 20px;
