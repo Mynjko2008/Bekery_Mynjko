@@ -19,7 +19,7 @@
     --main-color: rgba(255, 255, 0, 0.753);
     --bg: #ddc396;
     --br-card: rgb(44, 34, 34);
-    --border: 0.1rem solid white;
+    --border: 0.1rem solid rgb(0, 0, 0);
 
 }
 
@@ -130,6 +130,9 @@ header{
     justify-content: center;
     border-radius: 5rem;
     width: fit-content; /* LIMITA A LARGURA AO CONTEÚDO */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn:hover {
@@ -209,6 +212,57 @@ section {
 }
 
 /* Producs Section */
+/* MENU */
+
+.menu .box-container {
+    display: grid;
+    /* Organiza os elementos internos em um layout de grade */
+    grid-template-columns: repeat(3, 1fr);
+    /* Cria colunas flexíveis com largura mínima de 30rem e máxima proporcional */
+    gap: 1.5rem;
+    /* Define o espaçamento entre os itens da grade */
+}
+
+.menu .box-container .box {
+    padding: 5rem;
+    /* Adiciona espaçamento interno ao redor do conteúdo da caixa */
+    text-align: center;
+    /* Centraliza o texto horizontalmente */
+    border: var(--border);
+    /* Aplica uma borda ao redor da caixa */
+    background: var(--bg-card);/* Define a cor de fundo da caixa */
+}
+
+.menu .box-container .box img {
+    height: 18rem;/* Define a altura da imagem */
+    border-radius: 100%;/* Torna a imagem circular */
+}
+
+.menu .box-container .box h3 {
+    color: black;/* Aplica a cor branca ao título */
+    font-size: 2rem;/* Define o tamanho da fonte do título */
+    padding: 1rem 0;/* Adiciona espaçamento vertical ao título */
+}
+
+.menu .box-container .box .price {
+    color: black;/* Define a cor branca para o preço */
+    font-size: 2.5rem;/* Define o tamanho da fonte do preço */
+    padding: 0.5rem 0;/* Adiciona espaçamento vertical ao preço */
+}
+
+.menu .box-container .box .price span {
+    font-size: 1.5rem;/* Define o tamanho da fonte para o preço original */
+    text-decoration: line-through;/* Aplica uma linha para indicar preço riscado */
+    font-weight: lighter;/* Aplica um peso de fonte mais fino */
+}
+
+.menu .box-container .box:hover {
+    background: #fff; /* Altera a cor de fundo para branco ao passar o mouse */
+}
+
+.menu .box-container .box:hover>* {
+    color: black; /* Altera a cor dos elementos filhos para preto ao passar o mouse */
+}
 
 
 
@@ -287,7 +341,7 @@ section {
     text-align: center; /* Centraliza o texto */
     padding: 1rem 0; /* Adiciona espaçamento interno vertical */
     font-size: 1.6rem; /* Define o tamanho da fonte */
-    border-top: var(--border); /* Adiciona uma borda superior */
+    border-top: 0.1rem solid rgb(255, 255, 255); /* Adiciona uma borda superior */
     margin-top: 2rem; /* Adiciona espaço acima do rodapé inferior */
     color: white; /* Define a cor do texto como branco*/
 }
