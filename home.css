@@ -120,19 +120,15 @@ header{
 }
 
 .btn {
-    margin-top: 1rem;
-    padding: 0.3rem 1rem; /* Reduzido o padding lateral */
+    margin: 1rem auto 0 auto; /* centraliza horizontalmente */
+    padding: 0.3rem 1rem;
     background: #996435;
     color: white;
     font-size: 1.7rem;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
     border-radius: 5rem;
-    width: fit-content; /* LIMITA A LARGURA AO CONTEÚDO */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: fit-content;
+    text-align: center;
 }
 
 .btn:hover {
@@ -264,8 +260,67 @@ section {
     color: black; /* Altera a cor dos elementos filhos para preto ao passar o mouse */
 }
 
+/* Clientes */
+.review .box-container {
+    display: grid;
+    /* Organiza os elementos internos em um layout de grade */
+    grid-template-columns: repeat(3, 1fr);
+    /* cria colunas flexiveis com largura minima de 3rem e maximo proporcional */
+    gap: 1.5rem;
+    /* espaçamento entre os itens da grade */
+}
 
+.review .box-container .box {
+    text-align: center;
+    /* centraliza o texto */
+    border: var(--border);
+    /* borda ao redor da caixa */
+    padding: 3rem 2rem;
+    /* espaçamento interno */
+}
 
+.review .box-container .box p {
+    font-size: 2rem;
+    /* tamanho do texto */
+    color: #000000;
+    /* cor do texto */
+    padding: 2rem 0;
+    /* espaçamento interno vertical */
+    line-height: 1.8;
+    /* espaçamento entre linhas de um texto*/
+}
+
+.review .box-container .box h3 {
+    font-size: 2.2rem;
+    /* tamanho do texto */
+    color: rgb(0, 0, 0);
+    /* cor do texto */
+    padding: 1rem 0;
+    /* espaçamento interno vertical */
+}
+
+.user {
+    height: 10rem;
+    /* Define a altura da imagem do usuário */
+    width: 10rem;
+    /* Define a largura da imagem do usuário */
+    border-radius: 50%;
+    /* Torna a imagem circular */
+    object-fit: cover;
+    /* Ajusta a imagem para preencher o container sem distorção */
+}
+
+.review .box-container .box .stars {
+    padding: 1.5rem;
+    /* espaçamento interno */
+}
+
+.review .box-container .box .stars i {
+    font-size: 2rem;
+    /* tamanho dos icones */
+    color: goldenrod;
+    /* cor dos icones */
+}
 
 /* footer */
 .title-footer {
@@ -351,7 +406,7 @@ section {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #25d366;
+    background-color: #0f8038;
     color: white;
     border-radius: 100%;
     width: 6rem;
