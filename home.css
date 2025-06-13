@@ -120,20 +120,20 @@ header{
 }
 
 .btn {
-    margin-top: 1rem; /* espaçamento superior */
-    padding: 0.9rem 3rem; /* preenchimento interno superior e inferior */
-    background: #996435; /* cor de fundo */
-    color: white; /* cor do texto */
-    font-size: 1.7rem; /* tamanho do texto */
-    cursor: pointer; /* cursor de ponteiro */
-    display: inline-block; /* exibe como bloco em linha */
-    border-radius: 5rem; /* borda arredondada */
+    margin-top: 1rem;
+    padding: 0.3rem 1rem; /* Reduzido o padding lateral */
+    background: #996435;
+    color: white;
+    font-size: 1.7rem;
+    cursor: pointer;
     display: flex;
-    justify-content: center; /* alinha os itens ao centro */
+    justify-content: center;
+    border-radius: 5rem;
+    width: fit-content; /* LIMITA A LARGURA AO CONTEÚDO */
 }
 
 .btn:hover {
-    letter-spacing: 0.2rem; /* espaçamento entre letras */
+    letter-spacing: 0.2rem;
 }
 
 /* About Section */
@@ -207,6 +207,10 @@ section {
     line-height: 1.8rem;
     /* espaçamento entre linhas de um texto*/
 }
+
+/* Producs Section */
+
+
 
 
 /* footer */
