@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="home.css">
     <script src="https://kit.fontawesome.com/fec10f46ff.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="images/pao.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
@@ -35,7 +36,7 @@
                 </li>
 
                 <li>
-                    <a href="#products">PROMOTIONS</a>
+                    <a href="#menu">Our Menu</a>
                 </li>
 
                 <li>
@@ -77,19 +78,11 @@
                     <img src="images/home.jpg" alt="Bakery image">
                 </div>
 
-                <div class="content">
-                    <h3> What makes mynjko bakery unique? </h3>
-
-                    <p>Discover the best bakery in town, where tradition meets flavor. Our artisanal breads and pastries
-                        are crafted with love and care, using only the finest ingredients.</p>
-
-                    <p>From our signature sourdough to our flaky croissants, every bite is a testament to our commitment
-                        to quality. Join us for a taste of excellence and experience the warmth of our bakery.</p>
-
+                <div class="content-about">
+                    <h3 id="typed-h3"></h3>
+                    <p id="typed-p1"></p>
+                    <p id="typed-p2"></p>
                     <a href="#" class="btn"> Faça um pedido </a>
-
-
-
                 </div>
             </div>
 
@@ -97,51 +90,51 @@
 
         <section id="menu" class="menu">
             <h2 class="heading">Our <span>Menu</span></h2>
-        
+
             <div class="box-container">
-        
+
                 <div class="box">
                     <img src="images/img1.jpg" alt="Image 1">
                     <h3>Strawberry Pie Slice</h3>
                     <div class="price">$3.90 <span>$4.50</span></div>
                     <a href="#" class="btn">Add to Cart</a>
                 </div>
-        
+
                 <div class="box">
                     <img src="images/img2.jpg" alt="Image 2">
                     <h3>Mocha</h3>
                     <div class="price">$4.50 <span>$5.50</span></div>
                     <a href="#" class="btn">Add to Cart</a>
                 </div>
-        
+
                 <div class="box">
                     <img src="images/img3.JPG" alt="Image 3">
                     <h3>Espresso</h3>
                     <div class="price">$2.00 <span>$2.50</span></div>
                     <a href="#" class="btn">Add to Cart</a>
                 </div>
-        
+
                 <div class="box">
                     <img src="images/img4.jpg" alt="Image 4">
                     <h3>Grilled Bread</h3>
                     <div class="price">$1.90 <span>$2.30</span></div>
                     <a href="#" class="btn">Add to Cart</a>
                 </div>
-        
+
                 <div class="box">
                     <img src="images/img5.jpg" alt="Image 5">
                     <h3>Cappuccino</h3>
                     <div class="price">$3.80 <span>$4.30</span></div>
                     <a href="#" class="btn">Add to Cart</a>
                 </div>
-        
+
                 <div class="box">
                     <img src="images/img6.png" alt="Image 6">
                     <h3>Hamburger</h3>
                     <div class="price">$6.90 <span>$8.50</span></div>
                     <a href="#" class="btn">Add to Cart</a>
                 </div>
-        
+
             </div>
         </section>
 
@@ -169,7 +162,7 @@
                 <div class="box">
                     <p> Atendimento excelente e pão maravilhosos! Com certeza
                         voltarei! </p>
-                    <img src="images/cliente_2.jpg" alt="cliente 2"  class="user">
+                    <img src="images/cliente_2.jpg" alt="cliente 2" class="user">
                     <h3>Arthur Mynjko</h3>
                     <div class="stars">
                         <i class="fa-solid fa-star"></i>
@@ -200,7 +193,7 @@
 
         <section id="contact" class="contact">
             <h2 class="heading">Contact <span>Us</span></h2>
-        
+
             <form action="#" method="post" class="contact-form">
                 <div class="input-box">
                     <input type="text" name="name" placeholder="Full Name" required>

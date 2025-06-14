@@ -182,21 +182,19 @@ section {
     /* borda arredondada */
 }
 
-.row .content {
+.row .content-about {
     flex: 1 1 45rem;
-    /* define o tamanho flexivel do elemento: base 45rem, podendo crescer ou encolher */
     padding: 2rem;
-    /* espaçamento interno ao redor do conteúdo */
 }
 
-.row .content h3 {
+.row .content-about h3 {
     font-size: 3rem;
     /* tamanho do texto */
     color: white;
     /* cor do texto */
 }
 
-.row .content p {
+.row .content-about p {
     font-size: 1.6rem;
     /* tamanho do texto */
     color: #ccc;
@@ -207,7 +205,23 @@ section {
     /* espaçamento entre linhas de um texto*/
 }
 
-/* Producs Section */
+#typed-text {
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#typed-text.visible {
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+#typed-text.hidden {
+     opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+/* Products Section */
 /* MENU */
 
 .menu .box-container {
