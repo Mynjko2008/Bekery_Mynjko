@@ -1,38 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Reset */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Faz com que o padding e margin sejam aplicados corretamente */
+    box-sizing: border-box;
+    /* Ensures correct application of padding and margin */
     font-family: 'Roboto', 'sans-serif';
     text-decoration: none;
-    text-transform: capitalize; /* Deixa o texto em caixa baixa */
-    transition: 0.2s linear; /* Transição suave */
-    outline: none; /* Remove contorno */
-    border: none; /* Remove borda */
+    text-transform: capitalize;
+    /* Capitalizes the first letter of each word */
+    transition: 0.2s linear;
+    /* Smooth transition effect */
+    outline: none;
+    /* Removes default outline */
+    border: none;
+    /* Removes default border */
     scroll-behavior: smooth;
     list-style: none;
 }
 
 :root {
-
     --main-color: rgba(255, 255, 0, 0.753);
     --bg: #ddc396;
     --br-card: rgb(44, 34, 34);
     --border: 0.1rem solid rgb(0, 0, 0);
-
 }
 
-html{
-    font-size: 62.5%; /* Configuração do font-size para 62.5%, facilitando o uso do rem (1rem = 10px) */
+html {
+    font-size: 62.5%;
+    /* Sets 1rem to equal 10px */
 }
 
 body {
     background: var(--bg);
 }
 
-
-header{
+header {
     background: #A55B1B;
     display: flex;
     align-items: center;
@@ -44,6 +48,11 @@ header{
     left: 0;
     z-index: 999;
 }
+
+.logo img {
+    height: 6.5rem; /* Define altura da logo */
+}
+
 .ul-header {
     display: flex;
     gap: 15px;
@@ -56,71 +65,79 @@ header{
 
 .ul-header li a:hover {
     color: var(--main-color);
-    border-bottom: 0.1rem solid var(--main-color); /* adiciona uma borda inferior ao link quando o mouse passa por cima */
-    padding-bottom: 0.5rem; /* adiciona um espaçamento inferior ao link quando o mouse passa por cima */
-    transition: 0.2s linear; /* adiciona uma transição suave ao efeito */
+    border-bottom: 0.1rem solid var(--main-color);
+    /* Adds a bottom border on hover */
+    padding-bottom: 0.5rem;
+    /* Adds bottom padding on hover */
+    transition: 0.2s linear;
+    /* Smooth transition */
 }
 
 .icons {
-    /* NÂO ESTOU MEXENDO NOS ICONES E SIM NA DIV */
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.icons i {
-    /* AGORA SIM É NOS ICONES */
-    color: white; /* cor do icone */
-    cursor: pointer; /* cursor de ponteiro */
-    font-size: 2.5rem; /* tamanho do icone */
-    padding: 0.5rem; /* espaçamento interno do icone */
+.icons i,
+.icons .hamburger {
+    font-size: 2.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.icons .hamburger {
+    display: none;
+    /* Visível apenas no mobile, controlado via media query */
 }
 
 .icons i:hover {
-    color: var(--main-color); /* muda a cor do icone quando o mouse passa por cima */
+    color: var(--main-color);
+    /* Changes icon color on hover */
 }
 
 /* Home Section */
-
 #home {
-    display: flex; /* exibe como flexbox */
-    align-items: center; /* alinha os itens ao centro */
-    justify-content: center; /* alinha os itens ao centro */
-    position: relative; /* permite posicionamento relativo */
-    min-height: 85vh; /* altura minima da sessão */
-    background: url(images/home.jpg) no-repeat; /* add img sem repetição */
-    background-size: cover; /* preenchimento da imagem */
-    background-position: center; /* posicionamento da imagem */
-    border-bottom: var(--border); /* adiciona borda inferior */
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 85vh;
+    background: url(images/home.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: var(--border);
 }
 
 .content {
-    max-width: 60rem; /* define altura maxima */
-    position: relative; /* permite posicionamento relativo */
-    z-index: 2; /* garante que o conteudo fique acima da sobreposição */
-
+    max-width: 60rem;
+    position: relative;
+    z-index: 2;
 }
 
 .content h3 {
-    font-size: 6rem; /* tamanho do titulo */
-    text-transform: uppercase; /* deixando o texto em caixa alta */
-    color: white; /* cor do texto */
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: white;
 }
 
 #home::before {
-    content: ""; /* adicona pseudo-elemento vazio */
-    position: absolute; /* permite posicionamento absoluto */
-    top: 0; /* alinha o pseudo-elemento ao topo */
-    left: 0; /* alinha a esuqerda */
-    width: 100%; /* ocupa toda largura */
-    height: 100%; /* ocupa toda toda largura */
-    background: rgba(0, 0, 0, 0.5); /* adiciona sobreposição mais escura */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Adds dark overlay */
     z-index: 1;
 }
 
 .btn {
-    margin: 1rem auto 0 auto; /* centraliza horizontalmente */
+    margin: 1rem auto 0 auto;
     padding: 0.3rem 1rem;
     background: #996435;
     color: white;
@@ -136,50 +153,42 @@ header{
 }
 
 /* About Section */
-
 section {
-    padding: 2rem 7%; /* Espaçamento interno nas sessões(responsividade) */
-
+    padding: 2rem 7%;
+    /* Internal spacing (responsive) */
 }
 
 .heading {
-    text-align: center; /* centraliza o texto */
-    color: #fa9a2b; /* cor do texto */
-    text-transform: uppercase;/* caixa alta */
-    font-size: 4rem; /* tamanho do texto */
-    padding-bottom: 3rem; /* espaçamento inferior */
+    text-align: center;
+    color: #fa9a2b;
+    text-transform: uppercase;
+    font-size: 4rem;
+    padding-bottom: 3rem;
 }
 
 .heading span {
-    color: #e27d01; /* cor do texto */
-    text-transform: uppercase; /* caixa alta */
+    color: #e27d01;
+    text-transform: uppercase;
 }
+
 .row {
     display: flex;
-    /* exibe como flexbox */
     align-items: center;
-    /* alinha os itens ao centro */
     justify-content: center;
-    /* alinha os itens ao centro */
     flex-wrap: wrap;
-    /* quebra de linha */
     border: var(--border);
-    /* borda */
     background: var(--br-card);
-    /* cor de fundo */
 }
 
 .row .image {
-    flex: 1 1 45rem; /* define o tamanho flexivel do elemento: base 45rem, podendo crescer ou encolher, ou seja, faz com que possa ser adaptavel para telas grandes e pequenas */
+    flex: 1 1 45rem;
+    /* Allows the element to grow/shrink with a base of 45rem */
 }
 
 .row .image img {
     width: 100%;
-    /* largura total */
     height: 100%;
-    /* altura total */
     border-radius: 3rem;
-    /* borda arredondada */
 }
 
 .row .content-about {
@@ -189,20 +198,14 @@ section {
 
 .row .content-about h3 {
     font-size: 3rem;
-    /* tamanho do texto */
     color: white;
-    /* cor do texto */
 }
 
 .row .content-about p {
     font-size: 1.6rem;
-    /* tamanho do texto */
     color: #ccc;
-    /* cor do texto */
     padding: 1rem 0;
-    /* espaçamento interno vertical ao texto e as laterais zeradas */
     line-height: 1.8rem;
-    /* espaçamento entre linhas de um texto*/
 }
 
 #typed-text {
@@ -217,123 +220,96 @@ section {
 }
 
 #typed-text.hidden {
-     opacity: 0;
+    opacity: 0;
     transition: opacity 0.8s ease;
 }
 
 /* Products Section */
 /* MENU */
-
 .menu .box-container {
     display: grid;
-    /* Organiza os elementos internos em um layout de grade */
     grid-template-columns: repeat(3, 1fr);
-    /* Cria colunas flexíveis com largura mínima de 30rem e máxima proporcional */
     gap: 1.5rem;
-    /* Define o espaçamento entre os itens da grade */
 }
 
 .menu .box-container .box {
     padding: 5rem;
-    /* Adiciona espaçamento interno ao redor do conteúdo da caixa */
     text-align: center;
-    /* Centraliza o texto horizontalmente */
     border: var(--border);
-    /* Aplica uma borda ao redor da caixa */
-    background: var(--bg-card);/* Define a cor de fundo da caixa */
+    background: var(--bg-card);
 }
 
 .menu .box-container .box img {
-    height: 18rem;/* Define a altura da imagem */
-    border-radius: 100%;/* Torna a imagem circular */
+    height: 18rem;
+    border-radius: 100%;
 }
 
 .menu .box-container .box h3 {
-    color: black;/* Aplica a cor branca ao título */
-    font-size: 2rem;/* Define o tamanho da fonte do título */
-    padding: 1rem 0;/* Adiciona espaçamento vertical ao título */
+    color: black;
+    font-size: 2rem;
+    padding: 1rem 0;
 }
 
 .menu .box-container .box .price {
-    color: black;/* Define a cor branca para o preço */
-    font-size: 2.5rem;/* Define o tamanho da fonte do preço */
-    padding: 0.5rem 0;/* Adiciona espaçamento vertical ao preço */
+    color: black;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
 }
 
 .menu .box-container .box .price span {
-    font-size: 1.5rem;/* Define o tamanho da fonte para o preço original */
-    text-decoration: line-through;/* Aplica uma linha para indicar preço riscado */
-    font-weight: lighter;/* Aplica um peso de fonte mais fino */
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
 }
 
 .menu .box-container .box:hover {
-    background: #fff; /* Altera a cor de fundo para branco ao passar o mouse */
+    background: #fff;
 }
 
 .menu .box-container .box:hover>* {
-    color: black; /* Altera a cor dos elementos filhos para preto ao passar o mouse */
+    color: black;
 }
 
-/* Clientes */
+/* Clients Section */
 .review .box-container {
     display: grid;
-    /* Organiza os elementos internos em um layout de grade */
     grid-template-columns: repeat(3, 1fr);
-    /* cria colunas flexiveis com largura minima de 3rem e maximo proporcional */
     gap: 1.5rem;
-    /* espaçamento entre os itens da grade */
 }
 
 .review .box-container .box {
     text-align: center;
-    /* centraliza o texto */
     border: var(--border);
-    /* borda ao redor da caixa */
     padding: 3rem 2rem;
-    /* espaçamento interno */
 }
 
 .review .box-container .box p {
     font-size: 2rem;
-    /* tamanho do texto */
     color: #000000;
-    /* cor do texto */
     padding: 2rem 0;
-    /* espaçamento interno vertical */
     line-height: 1.8;
-    /* espaçamento entre linhas de um texto*/
 }
 
 .review .box-container .box h3 {
     font-size: 2.2rem;
-    /* tamanho do texto */
     color: rgb(0, 0, 0);
-    /* cor do texto */
     padding: 1rem 0;
-    /* espaçamento interno vertical */
 }
 
 .user {
     height: 10rem;
-    /* Define a altura da imagem do usuário */
     width: 10rem;
-    /* Define a largura da imagem do usuário */
     border-radius: 50%;
-    /* Torna a imagem circular */
     object-fit: cover;
-    /* Ajusta a imagem para preencher o container sem distorção */
 }
 
 .review .box-container .box .stars {
     padding: 1.5rem;
-    /* espaçamento interno */
 }
 
 .review .box-container .box .stars i {
     font-size: 2rem;
-    /* tamanho dos icones */
     color: goldenrod;
-    /* cor dos icones */
 }
 
 /* Contact Section */
@@ -386,86 +362,86 @@ section {
     background: #7f522b;
 }
 
-/* footer */
+/* Footer */
 .title-footer {
-    text-align: center; /* Centraliza o texto */
-    text-transform: uppercase; /* Converte o texto para letras maiúsculas */
-    font-size: 2rem; /* Define o tamanho da fonte */
-    color: #fff; /* Define a cor do texto como branco */
-    margin-bottom: 1.5rem; /* Adiciona espaço abaixo do título */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
 }
 
 .title-footer span {
-    color: 	#f0a64c; /* Aplica a cor principal ao texto dentro do span */
-    text-transform: uppercase; /* Converte o texto para letras maiúsculas */
+    color: #f0a64c;
+    text-transform: uppercase;
 }
 
 .footer {
-    background: #996435; /* Define a cor de fundo do rodapé */
-    text-align: center; /* Centraliza o texto */
-    padding: 4rem 0; /* Adiciona espaçamento interno vertical ao rodapé */
+    background: #996435;
+    text-align: center;
+    padding: 4rem 0;
 }
 
 .footer .container {
-    display: flex; /* Ativa o layout flexível */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    justify-content: space-between; /* Distribui os itens com espaço entre eles */
-    padding: 0 7%; /* Adiciona espaçamento interno horizontal */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 7%;
 }
 
 .content-1 {
-    flex: 1 1 25rem; /* Define tamanho flexível com largura mínima de 25rem */
-    margin: 1rem; /* Adiciona espaçamento ao redor do conteúdo */
+    flex: 1 1 25rem;
+    margin: 1rem;
 }
 
 .content-1 ul {
-    list-style: none; /* Remove os marcadores de lista */
-    padding: 0; /* Remove o espaçamento interno padrão */
+    list-style: none;
+    padding: 0;
 }
 
 .content-1 ul li {
-    margin-bottom: 1rem; /* Adiciona espaçamento inferior entre os itens da lista */
+    margin-bottom: 1rem;
 }
 
 .content-1 ul li a {
-    color: white; /* Define a cor do texto como cinza claro */
-    text-decoration: none; /* Remove o sublinhado do link */
-    font-size: 1.6rem; /* Define o tamanho da fonte */
-    transition: color 0.3s; /* Aplica uma transição suave na mudança de cor */
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: color 0.3s;
 }
 
 .content-1 ul li a:hover {
-    color: var(--main-color); /* Altera a cor para a cor principal ao passar o mouse */
-    border-bottom: 0.1rem solid var(--main-color); /* adiciona uma borda inferior ao link quando o mouse passa por cima */
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
 }
 
 .social-links {
-    display: flex; /* Ativa o layout flexível */
-    gap: 1rem; /* Define o espaçamento entre os itens */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    margin-top: 1.5rem; /* Adiciona espaço acima das redes sociais */
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
 }
 
 .social-links a {
-    color: white; /* Define a cor inicial dos ícones */
-    font-size: 3rem; /* Define o tamanho dos ícones */
-    transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
+    color: white;
+    font-size: 3rem;
+    transition: color 0.3s;
 }
 
 .social-links a:hover {
-    color: var(--main-color); /* Altera a cor para a cor principal ao passar o mouse */
+    color: var(--main-color);
 }
 
 .footer-bottom {
-    text-align: center; /* Centraliza o texto */
-    padding: 1rem 0; /* Adiciona espaçamento interno vertical */
-    font-size: 1.6rem; /* Define o tamanho da fonte */
-    border-top: 0.1rem solid rgb(255, 255, 255); /* Adiciona uma borda superior */
-    margin-top: 2rem; /* Adiciona espaço acima do rodapé inferior */
-    color: white; /* Define a cor do texto como branco*/
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    border-top: 0.1rem solid rgb(255, 255, 255);
+    margin-top: 2rem;
+    color: white;
 }
 
-/* Whatsapp Button */
+/* WhatsApp Button */
 .botao-whats {
     position: fixed;
     bottom: 20px;
@@ -480,4 +456,245 @@ section {
     justify-content: center;
     font-size: 3rem;
     z-index: 1000;
+}
+
+/* === Hamburger Menu Styles === */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Container for Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #A55B1B;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    display: none;
+    /* Hidden by default */
+    z-index: 1000;
+}
+
+/* Display Mobile Menu when 'flex' is added */
+.mobile-menu.flex {
+    display: flex;
+}
+
+/* Close button inside mobile menu */
+.mobile-menu .close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation links for mobile menu */
+.nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nav-links-mobile li a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.nav-links-mobile li a:hover {
+    color: var(--main-color);
+}
+
+/* Optional mobile register button */
+.cad-mobile button {
+    background: var(--main-color);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.cad-mobile button a {
+    color: black;
+    text-decoration: none;
+}
+
+.cad-mobile button:hover {
+    background: white;
+}
+
+
+/* === Responsiveness === */
+
+/* Screens up to 1200px */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1.5rem 5%;
+    }
+
+    section {
+        padding: 2rem 5%;
+    }
+
+    .footer .container {
+        padding: 0 5%;
+    }
+}
+
+/* Tablets (up to 992px) */
+@media (max-width: 992px) {
+
+    .menu .box-container,
+    .review .box-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ul-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-end;
+    }
+
+    .icons {
+        gap: 10px;
+    }
+
+    .content h3 {
+        font-size: 4.5rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+}
+
+/* Large smartphones */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .ul-header {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .icons {
+        align-self: flex-end;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .menu .box-container,
+    .review .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .content h3 {
+        font-size: 3.5rem;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .contact-form {
+        padding: 0 1rem;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-1 {
+        text-align: center;
+    }
+
+    .icons .hamburger {
+        display: block;
+    }
+
+    .ul-header {
+        display: none;
+    }
+
+    /* Esconde o botão do menu hambúrguer quando o menu estiver aberto */
+    .mobile-menu.flex+nav .hamburger,
+    .mobile-menu.flex~.hamburger {
+        display: none !important;
+    }
+}
+
+/* Small smartphones */
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    .content h3 {
+        font-size: 3rem;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+    }
+
+    .contact .heading {
+        font-size: 2rem;
+    }
+
+    .menu .box-container .box {
+        padding: 3rem 1rem;
+    }
+
+    .review .box-container .box {
+        padding: 2rem 1rem;
+    }
+
+    .botao-whats {
+        width: 5rem;
+        height: 5rem;
+        font-size: 2.5rem;
+    }
+
+    .icons .hamburger {
+        display: block;
+    }
+
+    .ul-header {
+        display: none;
+    }
+
+    /* Esconde o botão do menu hambúrguer quando o menu estiver aberto */
+    .mobile-menu.flex+nav .hamburger,
+    .mobile-menu.flex~.hamburger {
+        display: none !important;
+    }
 }

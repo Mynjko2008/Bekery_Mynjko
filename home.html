@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakery Mynjko | Oficial</title>
+    <title>Bakery Mynjko | Official</title>
     <link rel="stylesheet" href="home.css">
     <script src="https://kit.fontawesome.com/fec10f46ff.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="images/pao.png" type="image/x-icon">
@@ -14,64 +14,66 @@
 <body>
     <header>
         <div>
-            <a href="" class="logo">
-                <img src="" alt="The bakery’s logo">
+            <a href="#" class="logo">
+                <img src="images/pao.png" alt="The bakery’s logo">
             </a>
-
         </div>
-
-        <div>
-
+    
+        <nav style="display: flex; align-items: center; gap: 2rem;">
             <ul class="ul-header">
-                <li>
-                    <a href="home.html">HOME</a>
-                </li>
-
-                <li>
-                    <a href="#about">ABOUT</a>
-                </li>
-
-                <li>
-                    <a href="menu.html">MENU</a>
-                </li>
-
-                <li>
-                    <a href="#menu">Our Menu</a>
-                </li>
-
-                <li>
-                    <a href="#review">REVIEW</a>
-                </li>
-
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="#menu">OUR MENU</a></li>
+                <li><a href="#review">REVIEWS</a></li>
             </ul>
-
-
+    
+            <div class="icons">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-car"></i>
+    
+                <!-- Botão do menu hambúrguer dentro dos ícones -->
+                <button class="hamburger" id="hamburgerButton">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <button id="closeButton" class="close">
+                <i class="fas fa-times"></i>
+            </button>
+    
+            <ul class="nav-links-mobile">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="#menu">OUR MENU</a></li>
+                <li><a href="#review">REVIEWS</a></li>
+            </ul>
+    
+            <div id="btn-mobile" class="cad-mobile">
+                <button>
+                    <a href="form.html" target="_blank">
+                        <p>Register</p>
+                    </a>
+                </button>
+            </div>
         </div>
-
-        <div class="icons">
-
-            <i class="fa-solid fa-user"></i>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-car"></i>
-            <i class="fa-solid fa-bars"></i> <!-- Icon hamburguer -->
-
-        </div>
-
     </header>
 
     <main>
         <section id="home">
             <div class="content">
-                <h3> Welcome to Bakery Mynjko </h3>
-
-
-
-                <a href="#" class="btn"> Faça um pedido </a>
+                <h3>Welcome to Bakery Mynjko</h3>
+                <a href="#" class="btn">Place an Order</a>
             </div>
         </section>
 
         <section id="about" class="about">
-            <h1 class="heading">Sobre <span>Nós</span></h1>
+            <h1 class="heading">About <span>Us</span></h1>
 
             <div class="row">
                 <div class="image">
@@ -82,17 +84,15 @@
                     <h3 id="typed-h3"></h3>
                     <p id="typed-p1"></p>
                     <p id="typed-p2"></p>
-                    <a href="#" class="btn"> Faça um pedido </a>
+                    <a href="#" class="btn">Place an Order</a>
                 </div>
             </div>
-
         </section>
 
         <section id="menu" class="menu">
             <h2 class="heading">Our <span>Menu</span></h2>
 
             <div class="box-container">
-
                 <div class="box">
                     <img src="images/img1.jpg" alt="Image 1">
                     <h3>Strawberry Pie Slice</h3>
@@ -134,61 +134,50 @@
                     <div class="price">$6.90 <span>$8.50</span></div>
                     <a href="#" class="btn">Add to Cart</a>
                 </div>
-
             </div>
         </section>
 
-
         <section id="review" class="review">
-            <h2 class="heading">O que nossos <span>Clientes Dizem</span></h2>
+            <h2 class="heading">What Our <span>Clients Say</span></h2>
 
             <div class="box-container">
-                <!-- Cliente 1 -->
+                <!-- Client 1 -->
                 <div class="box">
-                    <p> O melhor pão que já experimentei! A massa é leve e os ingredientes são frescos. Recomendo a
-                        todos! </p>
-                    <img src="images/cliente_1.jpg" alt="cliente 1" class="user">
+                    <p>The best bread I’ve ever tasted! The dough is light and the ingredients are fresh. Highly
+                        recommended!</p>
+                    <img src="images/cliente_1.jpg" alt="Client 1" class="user">
                     <h3>Atila Sedenac</h3>
                     <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
                 </div>
 
-                <!-- Cliente 2 -->
+                <!-- Client 2 -->
                 <div class="box">
-                    <p> Atendimento excelente e pão maravilhosos! Com certeza
-                        voltarei! </p>
-                    <img src="images/cliente_2.jpg" alt="cliente 2" class="user">
+                    <p>Excellent service and amazing bread! I will definitely be back!</p>
+                    <img src="images/cliente_2.jpg" alt="Client 2" class="user">
                     <h3>Arthur Mynjko</h3>
                     <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                 </div>
 
-                <!-- Cliente 3 -->
+                <!-- Client 3 -->
                 <div class="box">
-                    <p> A Bakery Mynjko é simplesmente incrível! As pizzas são saborosas e o ambiente é acolhedor.
-                        Recomendo
-                        a todos! </p>
-                    <img src="images/cliente_3.jpg" alt="cliente 3" class="user">
+                    <p>Bakery Mynjko is simply amazing! The pizzas are delicious and the atmosphere is cozy. Highly
+                        recommended!</p>
+                    <img src="images/cliente_3.jpg" alt="Client 3" class="user">
                     <h3>Igor Araújo</h3>
                     <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
                 </div>
             </div>
-
         </section>
 
         <section id="contact" class="contact">
@@ -203,96 +192,65 @@
                 <button type="submit" class="btn">Send Message</button>
             </form>
         </section>
-
     </main>
 
     <footer class="footer">
-
         <div class="container">
-
             <div class="content-1">
                 <h4 class="title-footer">Bakery <span>Mynjko</span></h4>
-
                 <ul>
-
-                    <li>
-                        <a href="#about">About Us</a>
-                    </li>
-
-                    <li>
-                        <a href="#menu">Menu</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Política de Privacidade</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Termos de Serviços</a>
-                    </li>
-
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
                 </ul>
             </div>
-
-
-
-
-
 
             <div class="content-1">
                 <h4 class="title-footer">Get <span>Help</span></h4>
-
                 <ul>
-
-                    <li>
-                        <a href="#">FAQ</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Opções de Pagamento</a>
-                    </li>
-
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Payment Options</a></li>
                 </ul>
             </div>
 
-
-
-
-
             <div class="content-1">
                 <h4 class="title-footer">Follow <span>Us</span></h4>
-
                 <div class="social-links">
-
-                    <a href="#">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fa-brands fa-square-facebook"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
-
-
         </div>
 
         <div class="footer-bottom">
             <p>&copy; 2025 Bakery Mynjko. All Rights Reserved.</p>
         </div>
-
     </footer>
 
     <div>
-        <a href="" class="botao-whats">
+        <a href="#" class="botao-whats">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
+
+        <!-- Script para rolagem suave entre seções -->
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault(); // Impede o comportamento padrão de pular diretamente
+                    const targetId = this.getAttribute('href').substring(1); // Pega o ID do destino
+                    const section = document.getElementById(targetId); // Seleciona o elemento com o ID
+                    if (section) {
+                        section.scrollIntoView({ behavior: 'smooth' }); // Faz a rolagem suave até a seção
+    
+                        // Remove o "#" da URL sem recarregar a página
+                        history.pushState(null, null, window.location.pathname);
+                    }
+                });
+            });
+        </script>
 
     <script src="home.js"></script>
 </body>

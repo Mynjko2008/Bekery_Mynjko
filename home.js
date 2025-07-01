@@ -73,4 +73,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     observer.observe(section);
+
+    const hamburger = document.getElementById('hamburgerButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeButton = document.getElementById('closeButton');
+    
+    // Abrir o menu
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.add('flex');
+        hamburger.style.display = 'none'; // Esconde o ícone do menu
+    });
+    
+    // Fechar o menu
+    closeButton.addEventListener('click', () => {
+        mobileMenu.classList.remove('flex');
+        hamburger.style.display = 'block'; // Mostra o ícone novamente
+    });
 });
