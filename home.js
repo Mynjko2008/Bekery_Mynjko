@@ -1,3 +1,41 @@
+// ====================== SWIPER ======================
+const menuSwiper = new Swiper(".menu-swiper", {
+    slidesPerView: 1.2,
+    spaceBetween: 20,
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            autoplay: false
+        }
+    }
+});
+
+const reviewSwiper = new Swiper(".review-swiper", {
+    slidesPerView: 1.2,
+    spaceBetween: 20,
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            autoplay: false
+        }
+    }
+});
+
+// ====================== INTERAÇÕES ======================
 document.addEventListener("DOMContentLoaded", () => {
     const section = document.querySelector("#about");
     const h3 = document.getElementById("typed-h3");
@@ -74,19 +112,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(section);
 
+    // ====================== MENU MOBILE ======================
     const hamburger = document.getElementById('hamburgerButton');
     const mobileMenu = document.getElementById('mobileMenu');
     const closeButton = document.getElementById('closeButton');
-    
+
     // Abrir o menu
     hamburger.addEventListener('click', () => {
         mobileMenu.classList.add('flex');
-        hamburger.style.display = 'none'; // Esconde o ícone do menu
+        hamburger.style.display = 'none';
     });
-    
+
     // Fechar o menu
     closeButton.addEventListener('click', () => {
         mobileMenu.classList.remove('flex');
-        hamburger.style.display = 'block'; // Mostra o ícone novamente
+        hamburger.style.display = 'block';
     });
 });

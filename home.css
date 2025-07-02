@@ -1,41 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Reset */
+/* ===================== RESET ===================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Ensures correct application of padding and margin */
-    font-family: 'Roboto', 'sans-serif';
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     text-transform: capitalize;
-    /* Capitalizes the first letter of each word */
     transition: 0.2s linear;
-    /* Smooth transition effect */
     outline: none;
-    /* Removes default outline */
     border: none;
-    /* Removes default border */
     scroll-behavior: smooth;
     list-style: none;
 }
 
+/* ===================== VARIÁVEIS ===================== */
 :root {
     --main-color: rgba(255, 255, 0, 0.753);
     --bg: #ddc396;
     --br-card: rgb(44, 34, 34);
     --border: 0.1rem solid rgb(0, 0, 0);
+    --bg-card: #fff;
 }
 
+/* ===================== GERAL ===================== */
 html {
     font-size: 62.5%;
-    /* Sets 1rem to equal 10px */
 }
 
 body {
     background: var(--bg);
 }
 
+/* ===================== HEADER ===================== */
 header {
     background: #A55B1B;
     display: flex;
@@ -50,7 +48,7 @@ header {
 }
 
 .logo img {
-    height: 6.5rem; /* Define altura da logo */
+    height: 6.5rem;
 }
 
 .ul-header {
@@ -66,11 +64,7 @@ header {
 .ul-header li a:hover {
     color: var(--main-color);
     border-bottom: 0.1rem solid var(--main-color);
-    /* Adds a bottom border on hover */
     padding-bottom: 0.5rem;
-    /* Adds bottom padding on hover */
-    transition: 0.2s linear;
-    /* Smooth transition */
 }
 
 .icons {
@@ -91,15 +85,9 @@ header {
 
 .icons .hamburger {
     display: none;
-    /* Visível apenas no mobile, controlado via media query */
 }
 
-.icons i:hover {
-    color: var(--main-color);
-    /* Changes icon color on hover */
-}
-
-/* Home Section */
+/* ===================== HOME ===================== */
 #home {
     display: flex;
     align-items: center;
@@ -112,6 +100,17 @@ header {
     border-bottom: var(--border);
 }
 
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
 .content {
     max-width: 60rem;
     position: relative;
@@ -122,18 +121,6 @@ header {
     font-size: 6rem;
     text-transform: uppercase;
     color: white;
-}
-
-#home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /* Adds dark overlay */
-    z-index: 1;
 }
 
 .btn {
@@ -152,10 +139,9 @@ header {
     letter-spacing: 0.2rem;
 }
 
-/* About Section */
+/* ===================== ABOUT ===================== */
 section {
     padding: 2rem 7%;
-    /* Internal spacing (responsive) */
 }
 
 .heading {
@@ -168,7 +154,6 @@ section {
 
 .heading span {
     color: #e27d01;
-    text-transform: uppercase;
 }
 
 .row {
@@ -182,7 +167,6 @@ section {
 
 .row .image {
     flex: 1 1 45rem;
-    /* Allows the element to grow/shrink with a base of 45rem */
 }
 
 .row .image img {
@@ -216,103 +200,108 @@ section {
 
 #typed-text.visible {
     opacity: 1;
-    transition: opacity 0.8s ease;
 }
 
 #typed-text.hidden {
     opacity: 0;
-    transition: opacity 0.8s ease;
 }
 
-/* Products Section */
-/* MENU */
-.menu .box-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+/* ===================== MENU ===================== */
+.menu .swiper-wrapper,
+.review .swiper-wrapper {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
 }
 
-.menu .box-container .box {
-    padding: 5rem;
+.menu .swiper-slide,
+.review .swiper-slide {
     text-align: center;
     border: var(--border);
-    background: var(--bg-card);
+    background: var(--br-card);
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
 }
 
-.menu .box-container .box img {
+.menu .swiper-slide img {
     height: 18rem;
     border-radius: 100%;
 }
 
-.menu .box-container .box h3 {
-    color: black;
-    font-size: 2rem;
-    padding: 1rem 0;
+.menu .swiper-slide h3,
+.menu .swiper-slide .price {
+    color: white;
 }
 
-.menu .box-container .box .price {
-    color: black;
+.menu .swiper-slide .price {
     font-size: 2.5rem;
     padding: 0.5rem 0;
 }
 
-.menu .box-container .box .price span {
+.menu .swiper-slide .price span {
     font-size: 1.5rem;
     text-decoration: line-through;
     font-weight: lighter;
 }
 
-.menu .box-container .box:hover {
+.menu .swiper-slide:hover,
+.review .swiper-slide:hover {
     background: #fff;
 }
 
-.menu .box-container .box:hover>* {
+.menu .swiper-slide:hover *,
+.review .swiper-slide:hover * {
     color: black;
 }
 
-/* Clients Section */
-.review .box-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.review .box-container .box {
-    text-align: center;
-    border: var(--border);
-    padding: 3rem 2rem;
-}
-
-.review .box-container .box p {
+/* ===================== REVIEW ===================== */
+.review .swiper-slide p {
     font-size: 2rem;
-    color: #000000;
+    color: white;
     padding: 2rem 0;
     line-height: 1.8;
 }
 
-.review .box-container .box h3 {
+.review .swiper-slide {
+    border-radius: 2rem !important;
+    overflow: hidden; /* Garante que o conteúdo não vaze */
+}
+
+.review .swiper-slide img.user {
+    border-radius: 50% !important;
+    object-fit: cover;
+    width: 10rem;
+    height: 10rem;
+}
+
+.review .swiper-slide:last-child {
+    border-radius: 2rem; /* Isso quebraria a borda arredondada */
+}
+
+.review .swiper-slide h3 {
     font-size: 2.2rem;
-    color: rgb(0, 0, 0);
+    color: white;
     padding: 1rem 0;
+}
+
+.review .swiper-slide .stars {
+    padding: 1.5rem;
+}
+
+.review .swiper-slide .stars i {
+    font-size: 2rem;
+    color: goldenrod;
 }
 
 .user {
     height: 10rem;
     width: 10rem;
-    border-radius: 50%;
+    border-radius: 40%;
     object-fit: cover;
 }
 
-.review .box-container .box .stars {
-    padding: 1.5rem;
-}
-
-.review .box-container .box .stars i {
-    font-size: 2rem;
-    color: goldenrod;
-}
-
-/* Contact Section */
+/* ===================== CONTACT ===================== */
 .contact {
     padding: 4rem 2rem;
     text-align: center;
@@ -362,7 +351,7 @@ section {
     background: #7f522b;
 }
 
-/* Footer */
+/* ===================== FOOTER ===================== */
 .title-footer {
     text-align: center;
     text-transform: uppercase;
@@ -373,7 +362,6 @@ section {
 
 .title-footer span {
     color: #f0a64c;
-    text-transform: uppercase;
 }
 
 .footer {
@@ -394,20 +382,13 @@ section {
     margin: 1rem;
 }
 
-.content-1 ul {
-    list-style: none;
-    padding: 0;
-}
-
 .content-1 ul li {
     margin-bottom: 1rem;
 }
 
 .content-1 ul li a {
     color: white;
-    text-decoration: none;
     font-size: 1.6rem;
-    transition: color 0.3s;
 }
 
 .content-1 ul li a:hover {
@@ -425,7 +406,6 @@ section {
 .social-links a {
     color: white;
     font-size: 3rem;
-    transition: color 0.3s;
 }
 
 .social-links a:hover {
@@ -436,12 +416,12 @@ section {
     text-align: center;
     padding: 1rem 0;
     font-size: 1.6rem;
-    border-top: 0.1rem solid rgb(255, 255, 255);
+    border-top: 0.1rem solid white;
     margin-top: 2rem;
     color: white;
 }
 
-/* WhatsApp Button */
+/* ===================== WHATSAPP ===================== */
 .botao-whats {
     position: fixed;
     bottom: 20px;
@@ -458,18 +438,15 @@ section {
     z-index: 1000;
 }
 
-/* === Hamburger Menu Styles === */
+/* ===================== MOBILE MENU ===================== */
 .hamburger {
     display: none;
-    background: none;
-    border: none;
     font-size: 3rem;
     color: white;
     cursor: pointer;
     z-index: 1001;
 }
 
-/* Container for Mobile Menu */
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -482,28 +459,24 @@ section {
     justify-content: center;
     gap: 2rem;
     display: none;
-    /* Hidden by default */
     z-index: 1000;
 }
 
-/* Display Mobile Menu when 'flex' is added */
 .mobile-menu.flex {
     display: flex;
 }
 
-/* Close button inside mobile menu */
 .mobile-menu .close {
     position: absolute;
     top: 2rem;
     right: 2rem;
-    background: none;
-    border: none;
     font-size: 3rem;
     color: white;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
-/* Navigation links for mobile menu */
 .nav-links-mobile {
     display: flex;
     flex-direction: column;
@@ -513,82 +486,53 @@ section {
 .nav-links-mobile li a {
     color: white;
     font-size: 2rem;
-    text-decoration: none;
 }
 
 .nav-links-mobile li a:hover {
     color: var(--main-color);
 }
 
-/* Optional mobile register button */
 .cad-mobile button {
     background: var(--main-color);
     border: none;
     padding: 1rem 2rem;
     border-radius: 3rem;
-    cursor: pointer;
     font-size: 1.6rem;
+    cursor: pointer;
 }
 
 .cad-mobile button a {
     color: black;
-    text-decoration: none;
 }
 
-.cad-mobile button:hover {
-    background: white;
-}
-
-
-/* === Responsiveness === */
-
-/* Screens up to 1200px */
+/* ===================== RESPONSIVO ===================== */
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
     }
 
-    header {
+    header, section, .footer .container {
         padding: 1.5rem 5%;
-    }
-
-    section {
-        padding: 2rem 5%;
-    }
-
-    .footer .container {
-        padding: 0 5%;
     }
 }
 
-/* Tablets (up to 992px) */
 @media (max-width: 992px) {
-
-    .menu .box-container,
-    .review .box-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .ul-header {
         flex-direction: column;
         gap: 1rem;
         align-items: flex-end;
     }
 
-    .icons {
-        gap: 10px;
+    .menu .swiper-wrapper,
+    .review .swiper-wrapper {
+        flex-direction: column;
     }
 
     .content h3 {
         font-size: 4.5rem;
     }
-
-    .heading {
-        font-size: 3rem;
-    }
 }
 
-/* Large smartphones */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -597,62 +541,23 @@ section {
     }
 
     .ul-header {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .icons {
-        align-self: flex-end;
-    }
-
-    .row {
-        flex-direction: column;
-    }
-
-    .menu .box-container,
-    .review .box-container {
-        grid-template-columns: 1fr;
-    }
-
-    .content h3 {
-        font-size: 3.5rem;
-    }
-
-    .btn {
-        font-size: 1.5rem;
-        padding: 0.5rem 1.5rem;
-    }
-
-    .contact-form {
-        padding: 0 1rem;
-    }
-
-    .footer .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .content-1 {
-        text-align: center;
+        display: none;
     }
 
     .icons .hamburger {
         display: block;
     }
 
-    .ul-header {
-        display: none;
+    .row {
+        flex-direction: column;
     }
 
-    /* Esconde o botão do menu hambúrguer quando o menu estiver aberto */
-    .mobile-menu.flex+nav .hamburger,
-    .mobile-menu.flex~.hamburger {
-        display: none !important;
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
-/* Small smartphones */
 @media (max-width: 480px) {
     html {
         font-size: 50%;
@@ -662,39 +567,9 @@ section {
         font-size: 3rem;
     }
 
-    .btn {
-        font-size: 1.4rem;
-    }
-
-    .contact .heading {
-        font-size: 2rem;
-    }
-
-    .menu .box-container .box {
-        padding: 3rem 1rem;
-    }
-
-    .review .box-container .box {
-        padding: 2rem 1rem;
-    }
-
     .botao-whats {
         width: 5rem;
         height: 5rem;
         font-size: 2.5rem;
-    }
-
-    .icons .hamburger {
-        display: block;
-    }
-
-    .ul-header {
-        display: none;
-    }
-
-    /* Esconde o botão do menu hambúrguer quando o menu estiver aberto */
-    .mobile-menu.flex+nav .hamburger,
-    .mobile-menu.flex~.hamburger {
-        display: none !important;
     }
 }
