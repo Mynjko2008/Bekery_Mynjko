@@ -61,9 +61,6 @@ The layout is fully responsive and adjusts smoothly to different screen sizes:
 │ ├── img1.jpg ... img6.png
 │ ├── cliente_1.jpg ... cliente_3.jpg
 
-yaml
-Copiar
-Editar
 
 ---
 
@@ -76,9 +73,6 @@ To test the project locally:
    git clone https://github.com/mynjko2008/Bekery_Mynjko.git
 Navigate to the project folder:
 
-bash
-Copiar
-Editar
 cd Bekery_Mynjko
 Open home.html in your web browser.
 
