@@ -51,7 +51,7 @@ The layout is fully responsive and adjusts smoothly to different screen sizes:
 
 ## 📂 File Structure
 
-/
+
 ├── home.html
 ├── home.css
 ├── home.js
